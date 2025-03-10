@@ -1,6 +1,5 @@
-
 #import "generated/RNTurboModulesWorkshopsSpec/RNTurboModulesWorkshopsSpec.h"
 
-@interface TurboModulesWorkshops : NSObject <NativeTurboModulesWorkshopsSpec>
+@interface TurboModulesWorkshops : NativeTurboModulesWorkshopsSpecBase <NativeTurboModulesWorkshopsSpec>
 
 @end
