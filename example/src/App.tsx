@@ -7,6 +7,7 @@ import {
   passFunction,
   passObject,
   passString,
+  onEvent,
   useScreenOrientation,
 } from 'react-native-turbo-modules-workshops';
 
@@ -14,6 +15,7 @@ export default function App() {
   const orientation = useScreenOrientation();
 
   useEffect(() => {
+    onEvent((data) => console.log(data));
     passFunction((value) => console.log(value));
     getPromise('Workshops!').then((data) => console.log(data));
   }, []);

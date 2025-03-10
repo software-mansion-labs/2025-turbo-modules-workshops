@@ -64,6 +64,7 @@ class TurboModulesWorkshopsModule(reactContext: ReactApplicationContext) :
 
   override fun getPromise(data: String?, promise: Promise?) {
     promise?.resolve("$data new string")
+    emitOnEvent("Ready!")
   }
 
   override fun getScreenOrientation(): String {

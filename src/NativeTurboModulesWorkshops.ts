@@ -23,6 +23,7 @@ export interface Spec extends TurboModule {
   passObject(obj: CustomObject): CustomObject;
   passFunction(cb: (value: number) => void): void;
   getPromise(data: string): Promise<string>;
+  readonly onEvent: EventEmitter<string>;
 
   getScreenOrientation(): Orientation;
   readonly onScreenOrientationChange: EventEmitter<string>;

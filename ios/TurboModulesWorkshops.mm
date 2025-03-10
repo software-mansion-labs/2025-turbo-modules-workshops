@@ -39,6 +39,7 @@ RCT_EXPORT_MODULE()
             reject:(RCTPromiseRejectBlock)reject
 {
   resolve(@[[NSString stringWithFormat:@"%@ %@", data, @("new string")]]);
+  [self emitOnEvent:@"Ready!"];
 }
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:

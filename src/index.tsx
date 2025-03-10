@@ -28,6 +28,10 @@ export function getPromise(data: string) {
   return TurboModulesWorkshops.getPromise(data);
 }
 
+export function onEvent(callback: (data: string) => void) {
+  return TurboModulesWorkshops.onEvent(callback);
+}
+
 export function getScreenOrientation(): Orientation {
   return TurboModulesWorkshops.getScreenOrientation();
 }
