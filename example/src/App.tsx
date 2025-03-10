@@ -22,13 +22,31 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Orientation: {orientation}</Text>
-      <Text>multiply: {multiply(3, 7)}</Text>
-      <Text>passString: {passString('Workshops')}</Text>
-      <Text>passArray: {passArray([1, 2, 3]).join(', ')}</Text>
-      <Text>
+      <Text style={styles.text}>
+        Orientation:
+        <Text style={styles.results}> {orientation}</Text>
+      </Text>
+      <Text style={styles.text}>
+        multiply:
+        <Text style={styles.results}> {multiply(3, 7)}</Text>
+      </Text>
+      <Text style={styles.text}>
+        passString:
+        <Text style={styles.results}> {passString('Workshops')}</Text>
+      </Text>
+      <Text style={styles.text}>
+        passArray:
+        <Text style={styles.results}> [{passArray([1, 2, 3]).join(', ')}]</Text>
+      </Text>
+      <Text style={styles.text}>
         passObject:
-        {JSON.stringify(passObject({ index: 1, data: 'Workshops' }))}
+        <Text style={styles.results}>
+          {' '}
+          {JSON.stringify(passObject({ index: 1, data: 'Workshops' })).replace(
+            ',',
+            ',\n'
+          )}
+        </Text>
       </Text>
     </View>
   );
@@ -37,7 +55,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
+  },
+  text: {
+    fontSize: 20,
+    marginTop: 20,
+    fontWeight: 'bold',
+  },
+  results: {
+    fontFamily: 'Courier',
+    fontWeight: 'normal',
+    paddingLeft: 10,
   },
 });
